@@ -46,3 +46,4 @@ class Static {
 
 console.log(Static.species);
 console.log(Static.isAdult(20));
+
