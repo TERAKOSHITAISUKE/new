@@ -3,13 +3,17 @@
 //     age: number
 // }
 
-interface Human  {
-    name: string
-    age: number
+interface Human {
+  readonly name: string;
+  age: number;
+  greeting(message: string): void;
 }
 
-const human: Human = {
-    name: 'Quill',
-    age: 36
-} 
+class Developer implements Human {
+  constructor(public name: string, public age: number) { }
+  greeting(message: string): void {
+    console.log(message);
+  }
+}
 
+const user: Human = new Developer("Quil", 30);
